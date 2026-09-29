@@ -1,0 +1,44 @@
+/* ------------global defaults------------------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 60px;
+}
+
+/* ----------------------- navigation ---------------*/
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.nav-item {
+    position: relative;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #af0ccf;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-size: 0.85rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease;
+}
+/* hover  */
+.nav-item:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
